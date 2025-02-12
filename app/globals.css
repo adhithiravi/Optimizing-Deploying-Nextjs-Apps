@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-brown: #2c1810;
+  --accent-gold: #e6b17e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* Navigation Styles */
+.nav-link {
+  @apply text-white hover:text-gray-200 px-3 py-2 text-lg font-medium transition-colors;
+}
+
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-[#E6B17E] text-white px-6 py-2 rounded-md hover:bg-[#2C1810] transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#2C1810] px-6 py-2 rounded-md hover:bg-gray-100 transition-colors border border-[#2C1810];
+}
+
+/* Card Styles */
+.pie-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow;
+}
+
+/* Hero Section Styles */
+.hero-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50;
+}
+
+.hero-content {
+  @apply relative z-10 text-white max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8;
+}
