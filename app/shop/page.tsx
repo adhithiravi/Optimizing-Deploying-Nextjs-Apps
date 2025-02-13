@@ -5,6 +5,8 @@ import { getPies } from "../lib/getPies";
 import { Pie } from "../lib/types";
 import Navigation from "../components/Navigation";
 import AddToCartButton from "../components/AddToCartButton";
+import Image from "next/image";
+import MenuItem from "../components/MenuItem";
 
 export default function ShopPage() {
   const [pies, setPies] = useState<Pie[]>([]);
@@ -55,28 +57,7 @@ export default function ShopPage() {
       <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-serif font-bold mb-8">All Pies</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pies.map((pie: Pie) => (
-            <div
-              key={pie.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
-              <img
-                src={pie.image}
-                alt={pie.name}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{pie.name}</h3>
-                <p className="text-gray-600 mb-2">{pie.description}</p>
-                <p className="text-gray-800 font-bold">
-                  ${pie.price.toFixed(2)}
-                </p>
-                <AddToCartButton pie={pie} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <MenuItem pies={pies} />
       </div>
     </>
   );

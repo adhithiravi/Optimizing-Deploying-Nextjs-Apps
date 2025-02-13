@@ -1,6 +1,7 @@
 import React from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Navigation from "./components/Navigation";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,11 +16,16 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                  src="/images/Seasonal/pie-1.png"
-                  alt="Classic Apple Pie"
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative h-64 w-full">
+                  <Image
+                    src="/images/Seasonal/pie-1.png"
+                    alt="Classic Apple Pie"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">
                     Classic Apple Pie
@@ -29,11 +35,16 @@ export default function Home() {
               </div>
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                  src="/images/Seasonal/pie-2.png"
-                  alt="Pumpkin Pie"
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative h-64 w-full">
+                  <Image
+                    src="/images/Seasonal/pie-2.png"
+                    alt="Pumpkin Pie"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">Pumpkin Pie</h3>
                   <p className="text-gray-600">$14.95</p>
@@ -41,11 +52,16 @@ export default function Home() {
               </div>
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                  src="/images/Seasonal/pie-3.png"
-                  alt="Chocolate Pecan Pie"
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative h-64 w-full">
+                  <Image
+                    src="/images/Seasonal/pie-3.png"
+                    alt="Chocolate Pecan Pie"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">
                     Chocolate Pecan Pie

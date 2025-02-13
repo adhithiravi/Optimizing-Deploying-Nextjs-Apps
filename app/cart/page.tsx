@@ -5,6 +5,7 @@ import { useCart } from "../context/CartContext";
 import Navigation from "../components/Navigation";
 import Link from "next/link";
 import { FaTrash } from "react-icons/fa";
+import Image from "next/image";
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, total } = useCart();
@@ -29,11 +30,16 @@ export default function CartPage() {
                 className="flex items-center justify-between border-b pb-4"
               >
                 <div className="flex items-center space-x-4">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-24 h-24 object-cover rounded"
-                  />
+                  <div className="relative w-24 h-24">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="96px"
+                      quality={85}
+                      className="object-cover rounded"
+                    />
+                  </div>
                   <div>
                     <h3 className="font-medium">{item.name}</h3>
                     <p className="text-gray-600">${item.price.toFixed(2)}</p>
