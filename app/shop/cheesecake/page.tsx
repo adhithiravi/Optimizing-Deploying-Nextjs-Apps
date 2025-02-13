@@ -7,6 +7,7 @@ import Navigation from "../../components/Navigation";
 import AddToCartButton from "../../components/AddToCartButton";
 import Image from "next/image";
 import MenuItem from "../../components/MenuItem";
+
 export default function CheesecakePage() {
   const [pies, setPies] = useState<Pie[]>([]);
   const [isLoading, setIsLoading] = useState(true);
