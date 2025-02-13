@@ -1,12 +1,10 @@
 import React from "react";
 import HeroCarousel from "./components/HeroCarousel";
-import Navigation from "./components/Navigation";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navigation />
       <HeroCarousel />
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
