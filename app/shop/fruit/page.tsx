@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 import { getPies } from "../../lib/getPies";
 import { Pie } from "../../lib/types";
 import Navigation from "../../components/Navigation";
-import AddToCartButton from "../../components/AddToCartButton";
-import Image from "next/image";
 import MenuItem from "../../components/MenuItem";
 
 export default function FruitPage() {
