@@ -54,11 +54,12 @@ export default function HeroCarousel() {
             <Image
               src={slide.image}
               alt={slide.title}
-              fill
-              sizes="100vw"
-              quality={85}
               className="object-cover"
-              loading={"lazy"}
+              fill
+              priority
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8mCJUDwAFHQHICiHmvgAAAABJRU5ErkJggg=="
             />
             <div className="hero-content">
               <h1 className="text-5xl font-serif font-bold mb-6">

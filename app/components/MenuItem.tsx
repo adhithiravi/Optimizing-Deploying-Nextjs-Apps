@@ -14,11 +14,13 @@ export default function MenuItem({ pies }: { pies: Pie[] }) {
             <Image
               src={pie.image}
               alt={pie.name}
-              fill
               className="object-cover"
-              sizes="(min-width: 768px) 33vw, 100vw"
-              quality={85}
+              fill
+              sizes="(min-width:768px) 33vw, 100vw"
+              quality={75}
               loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMiYwMAwADzQF2G9dTZgAAAABJRU5ErkJggg=="
             />
           </div>
           <div className="p-4">
