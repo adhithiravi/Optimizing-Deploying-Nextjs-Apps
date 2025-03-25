@@ -1,7 +1,5 @@
 import React from "react";
 import { getPies } from "../../lib/getPies";
-import { Pie } from "../../lib/types";
-import AddToCartButton from "../../components/AddToCartButton";
 import MenuItem from "../../components/MenuItem";
 
 export default async function FruitPage() {
