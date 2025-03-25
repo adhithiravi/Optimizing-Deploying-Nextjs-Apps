@@ -1,11 +1,20 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { CartProvider } from "./context/CartContext";
-import { Inter } from "next/font/google";
+import { Playfair, Poppins } from "next/font/google";
 import Navigation from "./components/Navigation";
 
-const inter = Inter({
+const playfair = Playfair({
+  weight: ["400", "700"],
   subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -20,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
       <body>
         <CartProvider>
           <Navigation />

@@ -2,19 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
-
 :root {
   --primary-brown: #2c1810;
   --accent-gold: #e6b17e;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 .font-serif {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-playfair), serif;
 }
 
 /* Navigation Styles */
