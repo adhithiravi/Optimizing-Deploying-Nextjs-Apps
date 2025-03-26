@@ -7,17 +7,7 @@ export async function getPies(category?: string) {
 
     const res = await fetch(url, {
       cache: "no-store",
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
-
-    if (!res.ok) {
-      // Only try to read the response body once
-      const errorData = await res.json().catch(() => null);
-      const errorMessage = errorData?.message || "Failed to fetch pies";
-      throw new Error(errorMessage);
-    }
 
     const data = await res.json();
     return data;
