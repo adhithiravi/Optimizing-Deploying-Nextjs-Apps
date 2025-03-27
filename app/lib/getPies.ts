@@ -4,9 +4,7 @@ export async function getPies(category?: string) {
     if (category) {
       url.searchParams.set("category", category);
     }
-    const res = await fetch(url, {
-      cache: "no-store",
-    });
+    const res = await fetch(url);
 
     const data = await res.json();
     return data;
