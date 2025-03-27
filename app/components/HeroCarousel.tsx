@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const heroSlides = [
   {
@@ -50,10 +51,15 @@ export default function HeroCarousel() {
             }`}
           >
             <div className="hero-overlay" />
-            <img
+            <Image
               src={slide.image}
               alt={slide.title}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="object-cover"
+              fill
+              priority
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8mCJUDwAFHQHICiHmvgAAAABJRU5ErkJggg=="
             />
             <div className="hero-content">
               <h1 className="text-5xl font-serif font-bold mb-6">
