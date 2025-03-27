@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CartProvider } from "./context/CartContext";
 import { Playfair, Poppins } from "next/font/google";
 import NavigationWrapper from "./components/NavigationWrapper";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair({
   weight: ["400", "700"],
@@ -35,6 +36,7 @@ export default function RootLayout({
           <NavigationWrapper />
           {children}
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
