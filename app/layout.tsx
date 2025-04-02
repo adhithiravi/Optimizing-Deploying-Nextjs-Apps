@@ -4,6 +4,7 @@ import { CartProvider } from "./context/CartContext";
 import { Playfair, Poppins } from "next/font/google";
 import NavigationWrapper from "./components/NavigationWrapper";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const playfair = Playfair({
   weight: ["400", "700"],
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
         </CartProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
