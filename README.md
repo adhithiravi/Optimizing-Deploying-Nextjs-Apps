@@ -36,18 +36,18 @@ The repo has branches based on the modules corresponding to the course. There is
 
 M2 Image Optimization strategies:
 
-- m2-starter
-- m2-complete
+- M2-starter
+- M2-complete
 
 M3 Font and Other Common UI Optimization Techniques:
 
-- m3-starter
-- m3-complete
+- M3-starter
+- M3-complete
 
 M4 Performance Optimization Techniques:
 
-- m4-starter
-- m4-complete
+- M4-starter
+- M4-complete
 
 All the completed code is available in the main branch.
 
